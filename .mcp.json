@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "speak": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/bin/speak-when-done.js"],
+      "env": {
+        "SPEAK_DONE_TOOL": "off",
+        "SPEAK_LANGUAGE": "${user_config.language}",
+        "SPEAK_VOICE": "${user_config.voice}",
+        "DUOWAVE_URL": "${user_config.duowave_url}",
+        "DUOWAVE_KEY": "${user_config.duowave_key}",
+        "DUOWAVE_TARGET": "${user_config.duowave_target}"
+      }
+    }
+  }
+}

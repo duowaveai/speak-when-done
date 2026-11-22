@@ -1,0 +1,44 @@
+{
+  "name": "duowave-speak",
+  "displayName": "DuoWave Speak",
+  "version": "0.1.0",
+  "description": "Voice notifications for AI coding agents: says out loud, in one sentence, when the agent is done or needs you. Uses your computer's own voice in any language; with DuoWave, a speaker in the room.",
+  "author": { "name": "The DuoWave Authors", "url": "https://duowave.ai" },
+  "homepage": "https://github.com/duowaveai/speak-when-done",
+  "repository": "https://github.com/duowaveai/speak-when-done",
+  "license": "Apache-2.0",
+  "keywords": ["voice", "notifications", "text-to-speech", "tts", "hooks", "speak", "accessibility", "duowave"],
+  "userConfig": {
+    "language": {
+      "type": "string",
+      "title": "Language",
+      "description": "Language of the phrases, e.g. en-US, de, ru. Picks a matching system voice. Leave empty for the system default.",
+      "default": ""
+    },
+    "voice": {
+      "type": "string",
+      "title": "System voice",
+      "description": "A voice name, e.g. Samantha on macOS. Leave empty for the default voice.",
+      "default": ""
+    },
+    "duowave_url": {
+      "type": "string",
+      "title": "DuoWave address (optional)",
+      "description": "To speak through DuoWave (https://duowave.ai): its address, e.g. http://localhost:7780. Leave empty to use the system voice.",
+      "default": ""
+    },
+    "duowave_key": {
+      "type": "string",
+      "title": "DuoWave access key (optional)",
+      "description": "A key from DuoWave: Settings → People and access → Access keys, with the right “Speak through the speaker” (and “Conversation, time, date” for DuoWave’s voice on the computer).",
+      "sensitive": true,
+      "default": ""
+    },
+    "duowave_target": {
+      "type": "string",
+      "title": "Where DuoWave speaks",
+      "description": "auto (a speaker if one is connected, otherwise the computer), speaker, or computer.",
+      "default": "auto"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "speak-when-done",
+  "version": "0.1.0",
+  "description": "Voice notifications for AI coding agents: a text to speech MCP server and Claude Code plugin that says out loud when the agent is done. System voice by default, DuoWave optional.",
+  "mcpName": "io.github.duowaveai/speak-when-done",
+  "type": "module",
+  "bin": {
+    "speak-when-done": "bin/speak-when-done.js"
+  },
+  "exports": {
+    ".": "./src/speak.js",
+    "./mcp": "./src/mcp.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "test": "node --test test/",
+    "start": "node bin/speak-when-done.js"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "text-to-speech",
+    "tts",
+    "voice",
+    "voice-notifications",
+    "notifications",
+    "speak",
+    "say",
+    "ai-agents",
+    "coding-agent",
+    "claude-code",
+    "codex",
+    "cursor",
+    "hooks",
+    "duowave"
+  ],
+  "author": "The DuoWave Authors (https://duowave.ai)",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/duowaveai/speak-when-done#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duowaveai/speak-when-done.git"
+  },
+  "bugs": {
+    "url": "https://github.com/duowaveai/speak-when-done/issues"
+  }
+}

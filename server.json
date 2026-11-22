@@ -1,0 +1,61 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.duowaveai/speak-when-done",
+  "title": "Speak When Done",
+  "description": "Voice notifications for AI coding agents: text to speech MCP server that says when the agent is done",
+  "websiteUrl": "https://duowave.ai",
+  "repository": {
+    "url": "https://github.com/duowaveai/speak-when-done",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "speak-when-done",
+      "version": "0.1.0",
+      "runtimeHint": "npx",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "SPEAK_LANGUAGE",
+          "description": "Language of the phrases as a BCP 47 tag, e.g. en-US, de, ru. Picks a matching system voice.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "SPEAK_VOICE",
+          "description": "System voice name, e.g. Samantha on macOS. Default: the system voice.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "DUOWAVE_URL",
+          "description": "Optional. Address of DuoWave (https://duowave.ai) to speak on a speaker in the room, e.g. http://localhost:7780.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "DUOWAVE_KEY",
+          "description": "Optional. A DuoWave access key (Settings, People and access, Access keys).",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "DUOWAVE_TARGET",
+          "description": "Where DuoWave speaks: auto (default), speaker or computer.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "auto",
+          "choices": ["auto", "speaker", "computer"]
+        }
+      ]
+    }
+  ]
+}

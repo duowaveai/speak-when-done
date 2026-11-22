@@ -1,0 +1,15 @@
+{
+  "name": "duowave",
+  "owner": { "name": "The DuoWave Authors", "url": "https://duowave.ai" },
+  "description": "Plugins from DuoWave, the free open-source voice assistant.",
+  "plugins": [
+    {
+      "name": "duowave-speak",
+      "displayName": "DuoWave Speak",
+      "source": "./",
+      "description": "Says out loud, in one sentence, when the agent is done or needs you. System voice by default, DuoWave optional.",
+      "category": "productivity",
+      "tags": ["voice", "notifications", "text-to-speech", "hooks"]
+    }
+  ]
+}

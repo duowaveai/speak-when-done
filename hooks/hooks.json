@@ -1,0 +1,30 @@
+{
+  "description": "Say the outcome out loud in one sentence when Claude finishes or needs your input.",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/bin/speak-when-done.js", "hook"],
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt|idle_prompt|elicitation_dialog",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/bin/speak-when-done.js", "hook"],
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}
