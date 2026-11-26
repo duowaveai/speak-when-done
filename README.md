@@ -1,5 +1,7 @@
 # Speak When Done
 
+[![duowaveai/speak-when-done MCP server](https://glama.ai/mcp/servers/duowaveai/speak-when-done/badges/score.svg)](https://glama.ai/mcp/servers/duowaveai/speak-when-done)
+
 **Voice notifications for AI coding agents.** A tiny text to speech MCP server and Claude Code plugin that says out
 loud when your agent is done or needs you, so you can look away from the terminal.
 
